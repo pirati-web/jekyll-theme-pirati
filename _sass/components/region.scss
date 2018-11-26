@@ -1,0 +1,83 @@
+.pk-election-crossroad .pk-election-crossroad__place {
+  display: flex;
+  height: 100%;
+  padding-bottom: 2.5rem;
+}
+
+.pk-election-crossroad .pk-election-crossroad__place-body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.pk-election-crossroad__coa {
+  display: flex;
+  align-items: center;
+  max-width: 6rem;
+  min-width: 6rem;
+  background: #fff;
+  padding: 1rem;
+  border: 2px $light-gray solid;
+}
+
+.pk-election-crossroad__link {
+  display: inline-block;
+
+  .fa {
+    color: $dark-gray;
+  }
+
+  @include breakpoint(small down) {
+    display: block;
+  }
+}
+
+.pk-election-crossroad__link + .pk-election-crossroad__link {
+  margin-left: 1rem;
+
+  @include breakpoint(small down) {
+   margin-left: 0;
+  }
+}
+
+.pce-hero {
+  padding: 4rem 1rem;
+  text-align: center;
+
+  &--entry {
+      padding: 6rem 2rem 3rem;
+  }
+
+  @include breakpoint(medium up) {
+      padding: 6rem 2rem;
+
+      &--entry {
+          padding: 10rem 2rem 6rem;
+      }
+  }
+}
+
+.pce-hero__content {
+  margin: auto;
+  max-width: 60em;
+}
+
+.pce-hero__cta {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(medium up) {
+      margin-top: 4rem;
+      flex-direction: row;
+      justify-content: center;
+  }
+}
+
+.pce-hero__cta-item {
+  margin: .5rem 0;
+
+  @include breakpoint(medium up) {
+      margin: 0 1rem;
+  }
+}

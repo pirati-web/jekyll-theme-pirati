@@ -11,7 +11,7 @@
 				{% endfor %}
 				<div class="c-widget-accordion-content__cta">
 					{% assign peopleCol = site.collections | where: "label", "people" | first %}
-					<a class="expanded button large u-0margin" href="{% if peopleCol.root %}{{ peopleCol.root }}{% else %}{{ '/kontakty/' | relative_url }}{% endif %}"> Ozvi se nám! </a>
+					<a class="expanded button large u-0margin" href="{% if peopleCol.root %}{{ peopleCol.root }}{% else %}{{ '/kontakt/' | relative_url }}{% endif %}"> Ozvi se nám! </a>
 				</div>
 			</div>
 		</li>

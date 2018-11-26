@@ -47,6 +47,14 @@
       color: $white;
     }
   }
+  
+  .c-widget-accordion-link.c-widget-accordion-link--yt {
+    background: #cc181e;
+
+    .c-widget-accordion__title {
+      color: $white;
+    }
+  }
 }
 
 .c-widget-accordion .c-widget-accordion__title {

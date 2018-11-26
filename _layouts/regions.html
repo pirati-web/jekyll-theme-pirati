@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<div class="o-section">
+    <div class="c-content-block c-emphasized-text">{{ content }}</div>
+</div>
+
+
+{% if page.regions %}
+{% include regions/crossroad.html places=page.regions %}
+{% endif %}
+{% if site.data.regions %}
+{% include regions/crossroad.html places=site.data.regions %}
+{% endif %}
+

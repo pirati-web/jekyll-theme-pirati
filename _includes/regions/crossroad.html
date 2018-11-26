@@ -1,0 +1,40 @@
+
+<section class="pk-election-crossroad row u-uniform-size-row">
+  {% for place in include.places %}
+    <div class="columns medium-6">
+      <article class="pk-election-crossroad__place">
+        <div class="c-tile c-tile--fill pk-election-crossroad__place-body">
+          <div class="pk-election-crossroad__coa"><img src="{{ place.coa }}" alt="{{ place.locality }}"></div>
+          <div class="c-tile__body">
+            <h2 class="t-h4">{{ place.locality }}</h2>
+
+	    {% if place.note %}
+	    <p>{{ place.note }}</p>
+	    {% endif %}
+
+	    {% if place.link %}
+	    <div class="pk-election-crossroad__link">
+		    <span class="fa fa-globe"></span> <a href="{{ place.link }}" class="c-emphasized-anchor" target="_blank" rel="noopener">Web</a>
+	    </div>
+	    {% endif %}
+	    {% if place.programLink %}
+	    <div class="pk-election-crossroad__link">
+		    <span class="fa fa-book"></span> <a href="{{ place.programLink }}" class="c-emphasized-anchor" target="_blank" rel="noopener">Program</a>
+	    </div>
+	    {% endif %}
+	    {% if place.candidateListLink %}
+	    <div class="pk-election-crossroad__link">
+		    <span class="fa fa-users"></span> <a href="{{ place.candidateListLink }}" class="c-emphasized-anchor" target="_blank" rel="noopener">Kandidátka</a>
+	    </div>
+	    {% endif %}
+	    {% if place.candidateListWithProgramLink %}
+	    <div class="pk-election-crossroad__link">
+		    <span class="fa fa-book"></span> <a href="{{ place.candidateListWithProgramLink | relative_url }}" class="c-emphasized-anchor">Program a kandidátka</a>
+	    </div>
+	    {% endif %}
+          </div>
+        </div>
+      </article>
+    </div>
+  {% endfor %}
+</section>

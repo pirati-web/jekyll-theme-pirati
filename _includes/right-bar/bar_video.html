@@ -1,20 +1,42 @@
-<div class="o-section-block">
-  <ul class="c-widget-accordion c-widget-accordion--alert" data-accordion="" data-allow-all-closed="true">
+{% if page.youtube %}
+<div class="o-section-block show-for-medium">
+  <ul class="c-widget-accordion" data-accordion="" data-allow-all-closed="true">
     <li class="c-widget-accordion-item is-active" data-accordion-item="">
-      <a href="#" class="c-widget-accordion-link">
-        <span class="c-widget-accordion__title">Videa</span>
+
+      {% if page.youtube.title %}
+      <a href="#" class="c-widget-accordion-link c-widget-accordion-link--yt">
+	      <span class="c-widget-accordion__title">{{page.youtube.title}}</span>
       </a>
+      {% endif %}
+
       <div class="c-widget-accordion-content" data-tab-content="">
         <div class="c-widget-accordion-content-video">
+          
           <div class="c-widget-accordion-content__video u-video-wrapper-16-9">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pWK515EHyG0?rel=0&amp;controls=0" style="border: 0;" allowfullscreen=""></iframe>
+          
+             {% if page.youtube.id %}
+		  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/{{page.youtube.id}}?rel=0&amp;controls=0" style="border: 0;" allowfullscreen=""></iframe>
+             {% endif %}
+             
+	     {% if page.youtube.playlist %}
+
+	     <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list={{page.youtube.playlist}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+             {% endif %}
+          
           </div>
+
+          {% if page.youtube.button %}
           <div class="c-widget-accordion-content__cta">
-            <a class="alert expanded button large u-0margin" href="https://www.youtube.com/user/CeskaPiratskaStrana/videos" target="_blank" rel="noopener noreferrer"> Další videa na našem
-              <br> YouTube kanálu </a>
+		  <a class="expanded button large u-0margin" href={{page.youtube.button.url}} target="_blank" rel="noopener noreferrer">
+			  {{page.youtube.button.title}}
+		  </a>
           </div>
+          {% endif %}
+
         </div>
       </div>
+     
     </li>
   </ul>
 </div>
+{% endif %}

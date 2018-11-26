@@ -18,7 +18,14 @@ main:
     match: aktuality
   - link: /lide/
     name: O nás
-    match: lide
+    match: lide, regiony
+    submenu:
+      - link: /lide/
+        name: Naši lidé
+        match: lide
+      - link: /regiony/
+        name: Místní sdružení
+        match: reriony
   - link: /komunalni-volby/praha2018
     name: Komunální volby
     match: komunalni-volby
@@ -38,6 +45,8 @@ main:
   - link: /kontakt/
     name: Kontakt
     match: kontakt
+
+# hideSearch: yes
 
 bottom:
   - class: small-12 medium-4
